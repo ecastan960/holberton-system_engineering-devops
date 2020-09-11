@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
 touch hello 
-=======
-touch hello\n
->>>>>>> 19954570172088e7ac42d3f1930ed6c2e7c87275
