@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -al /$PWD | ls -al /.. | ls -al /root
+ls -al $PWD ../ boot/
