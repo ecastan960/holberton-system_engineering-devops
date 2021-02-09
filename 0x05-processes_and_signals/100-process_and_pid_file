@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Bash script that creates a file, displays text and receives sigterm and sigint signals.
+sudo touch /var/run/holbertonscript.pid | echo $$ > /var/run/holbertonscript.pid
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+    trap 'echo "I hate the kill command" | sudo rm /var/run/holbertonscript.pid' SIGTERM
+    trap 'echo "Y U no love me?!"' SIGINT
+    trap 'sudo rm /var/run/holbertonscript.pid' SIGQUIT
+done
