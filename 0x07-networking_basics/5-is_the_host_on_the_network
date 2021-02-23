@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
+#Script that pings 5 times an input address
 if [ -z "$1" ]
     then
         echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
     else
-        ping $1 -c 5
+        ping "$1" -c 5
 fi
