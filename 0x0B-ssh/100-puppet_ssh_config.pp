@@ -1,5 +1,17 @@
 #Config client ssh file to conect to server without password
-“` file_line { 'holberton':
+“` file_line { 'ssh_config':
+
+path => '/etc/ssh/ssh_config',
+line => 'Include /etc/ssh/ssh_config',
+}
+
+file_line { 'Host':
+
+path => '/etc/ssh/ssh_config',
+line => 'Host *',
+}
+
+file_line { 'holberton':
 
 path => '/etc/ssh/ssh_config',
 line => 'IdentityFile ~/.ssh/holberton',
