@@ -9,4 +9,20 @@ file_line { 'PasswordAuthentication':
 
 path => '/etc/ssh/ssh_config',
 line => 'PasswordAuthentication no',
-} “`
+} 
+file_line { 'HashKnownHosts':
+
+path => '/etc/ssh/ssh_config',
+line => 'HashKnownHosts yes',
+} 
+file_line { 'HashKnownHosts':
+
+path => '/etc/ssh/ssh_config',
+line => 'GSSAPIAuthentication yes',
+} 
+file_line { 'SendEnv':
+
+path => '/etc/ssh/ssh_config',
+line => 'SendEnv LANG LC_*',
+} 
+“`
