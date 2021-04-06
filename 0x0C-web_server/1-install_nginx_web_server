@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Bash script that configures a new Ubuntu machine
+sudo apt-get update
+Sudo apt-get -y install nginx
+Echo Holberton School for the win! | sudo tee /usr/share/nginx/html/index.html
+Sudo service nginx start
