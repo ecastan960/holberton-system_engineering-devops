@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #commands use to set up apache on docker container
 sudo apt-get update
-sudo apt install apache2
+sudo apt-get upgrade
+sudo apt install apache2 apache2-doc apache-utils
 sudo service apache2 start
