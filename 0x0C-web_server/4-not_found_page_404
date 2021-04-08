@@ -4,5 +4,5 @@ sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html
 sudo service nginx start
-sudo sed -i "37i\ \tlocation /redirect_me {return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;}" /etc/nginx/sites-available/default
+sudo sed -i "37i\ \tlocation /redirect_me/ {return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;}" /etc/nginx/sites-available/default
 sudo service nginx start
