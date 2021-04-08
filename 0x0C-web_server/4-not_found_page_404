@@ -6,7 +6,6 @@ echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html
 sudo touch /var/www/html/error404.html
 echo "Ceci n'est pas une page " > /var/www/html/error404.html
 echo "" >> /var/www/html/error404.html
-sudo service nginx start
 sudo sed -i "37i\ \tlocation /redirect_me/ {return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;}" /etc/nginx/sites-available/default
 sudo sed -i "38i\ \terror_page 404 /error404.html;" /etc/nginx/sites-available/default
 sudo service nginx start
