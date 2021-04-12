@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script that configure load balancer with HAproxy
 sudo apt-get update
-sudo apt-get install -y haproxy
+sudo apt-get install -y haproxy=1.5\*
 sudo sed -i "$ a ENABLE=1" /etc/default/haproxy
 sudo sed -i "$ a frontend http_front" /etc/haproxy/haproxy.cfg
 sudo sed -i "$ a\ \tbind *:80" /etc/haproxy/haproxy.cfg
