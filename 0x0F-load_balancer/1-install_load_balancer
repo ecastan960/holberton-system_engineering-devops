@@ -5,6 +5,7 @@ sudo apt-get install -y haproxy
 command="\
 frontend http_front
 	bind *:80
+	stats uri /haproxy?stats
 	default_backend http_back
 
 backend http_back
@@ -12,6 +13,6 @@ backend http_back
 	server 2267-web-01 35.227.67.236:80 check
 	server 2267-web-02 35.231.147.151:80 check
 "
-echo '$command' >> /etc/haproxy/haproxy.cfg
+echo "$command" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy reload
 sudo service haproxy restart
