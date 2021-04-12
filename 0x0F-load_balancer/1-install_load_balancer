@@ -10,4 +10,5 @@ sudo sed -i "$ a backend http_back" /etc/haproxy/haproxy.cfg
 sudo sed -i "$ a\ \tbalance roundrobin" /etc/haproxy/haproxy.cfg
 sudo sed -i "$ a\ \tserver 2267-web-01 35.227.67.236:80 check" /etc/haproxy/haproxy.cfg
 sudo sed -i "$ a\ \tserver 2267-web-02 35.231.147.151:80 check" /etc/haproxy/haproxy.cfg
+sudo service haproxy reload
 sudo systemctl restart haproxy
