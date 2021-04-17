@@ -8,19 +8,19 @@ then
 	subdom4=web-02.$1
 	record1=$(dig "$subdom1" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}')
 	destination1=$(dig "$subdom1" | grep -A1 'ANSWER SECTION:' | awk '{printf $5}')
-	echo The subdomain "$subdom1" is a "$record1" record and points to "$destination1"
+	echo The subdomain www is a "$record1" record and points to "$destination1"
 	record2=$(dig "$subdom2" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}')
 	destination2=$(dig "$subdom2" | grep -A1 'ANSWER SECTION:' | awk '{printf $5}')
-	echo The subdomain "$subdom2" is a "$record2" record and points to "$destination2"
+	echo The subdomain lb-01 is a "$record2" record and points to "$destination2"
 	record3=$(dig "$subdom3" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}')
 	destination3=$(dig "$subdom3" | grep -A1 'ANSWER SECTION:' | awk '{printf $5}')
-	echo The subdomain "$subdom3" is a "$record3" record and points to "$destination3"
+	echo The subdomain web-01 is a "$record3" record and points to "$destination3"
 	record4=$(dig "$subdom4" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}')
 	destination4=$(dig "$subdom4" | grep -A1 'ANSWER SECTION:' | awk '{printf $5}')
-	echo The subdomain "$subdom4" is a "$record4" record and points to "$destination4"
+	echo The subdomain web-02 is a "$record4" record and points to "$destination4"
 else
 	subdom=$2.$1
 	record=$(dig "$subdom" | grep -A1 'ANSWER SECTION:' | awk '{printf $4}')
 	destination=$(dig "$subdom" | grep -A1 'ANSWER SECTION:' | awk '{printf $5}')
-	echo The subdomain "$subdom" is a "$record" record and points to "$destination"
+	echo The subdomain "$2" is a "$record" record and points to "$destination"
 fi
