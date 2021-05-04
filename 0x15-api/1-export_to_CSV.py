@@ -17,7 +17,7 @@ if __name__ == "__main__":
     username = response_user.json()['username']
     t_total = len(response_task1.json())
     with open(file, mode='w') as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter=',', quotechar='"')
+        csv_writer = csv.writer(csv_file, delimiter=',', quoting=csv.QUOTE_ALL)
         for tasks in range(t_total):
             status = response_task1.json()[tasks]['completed']
             task = response_task1.json()[tasks]['title']
