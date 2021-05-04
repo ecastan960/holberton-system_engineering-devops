@@ -13,7 +13,6 @@ if __name__ == "__main__":
     tasks_url = 'https://jsonplaceholder.typicode.com/todos?userId={}'
     response_user = requests.get(users_url.format(user_id))
     response_task1 = requests.get(tasks_url.format(user_id))
-    response_task2 = requests.get(tasks_url.format(user_id))
     name = response_user.json()['name']
     t_total = len(response_task1.json())
     for tasks in range(t_total):
