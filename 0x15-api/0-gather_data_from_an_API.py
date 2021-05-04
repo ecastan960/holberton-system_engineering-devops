@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Python script that uses a REST API
 """
-import requests
 import json
+import requests
 import sys
 
 
