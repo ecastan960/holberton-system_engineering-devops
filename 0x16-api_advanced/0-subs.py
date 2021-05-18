@@ -6,7 +6,7 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """Funtion that returns the number of
+    """Function that returns the number of
     subscribers if exists
     """
     url = "https://www.reddit.com/r/{}/about.json"
